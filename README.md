@@ -16,9 +16,12 @@ FROM
   Customers c                                   --table from which to select, plus alias
 LEFT JOIN 
   Invoices i ON (c.CustomerId = i.CustomerId)   --join with additional table, based on key
-GROUP BY c.CustomerId                           --group data according to a column
-HAVING c.CustomerId NInvoices > 1               --filter rows based on condition
-ORDER BY c.NewId desc                           --sort rows according to a column (asc/desc)
+GROUP BY 
+  c.CustomerId                                  --group data according to a column
+HAVING 
+  c.CustomerId NInvoices > 1                    --filter rows based on condition
+ORDER BY 
+  c.NewId desc                                  --sort rows according to a column (asc/desc)
 
 ```
 
