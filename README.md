@@ -1,6 +1,6 @@
 ## SQL cheatsheet
 
-the example below uses the publically available Chinook dataset ([ER diagram](https://i.stack.imgur.com/LhVjF.jpg)). note that the example uses sqlite conventions.
+the example below uses the publically available Chinook database ([ER diagram](https://i.stack.imgur.com/LhVjF.jpg)). note that the example uses sqlite conventions.
 
 ```
 SELECT 
@@ -28,3 +28,8 @@ HAVING
 ORDER BY 
   c.NewId desc                                  --sort rows according to a column (asc/desc)
 ```
+
+## in this repository
+
+- example queries for the Chinook database
+- profiling and basic analyses of a Yelp database
