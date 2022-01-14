@@ -31,5 +31,5 @@ ORDER BY
 
 ## in this repository
 
-- example queries for the Chinook database
-- profiling and basic analyses of a Yelp database
+- example queries for the Chinook database: [link](https://github.com/shelbybachman/learning-sql/blob/main/query_examples/queries_chinook.sql)
+- profiling and basic analyses of a Yelp database: [link](https://github.com/shelbybachman/learning-sql/tree/main/yelp_project)
