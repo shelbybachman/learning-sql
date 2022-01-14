@@ -10,6 +10,11 @@ SELECT
   ,SUBSTR(c.LastName,1,2) as LastNameShort      --extract part of a string (here, first two chars)
   ,UPPER(c.CustomerID || c.LastName) as NewId
   ,COUNT(i.InvoiceId) as NInvoices              --aggregating performed by each level of "GROUP BY"
+  ,COUNT(*)                                     --counts number of rows
+  ,CASE                                         --if/else statement to create new column
+      WHEN c.LastName IS NULL THEN 'missing'
+      ELSE 'not_missing'
+      END as lastname_missing
 WHERE
   c.CustomerId < 200                            --filter rows based on condition
 FROM 
@@ -22,10 +27,4 @@ HAVING
   c.CustomerId NInvoices > 1                    --filter rows based on condition
 ORDER BY 
   c.NewId desc                                  --sort rows according to a column (asc/desc)
-
 ```
-
-### to add
-
-- creating a view
-- profiling a table
